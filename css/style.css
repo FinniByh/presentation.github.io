@@ -1,3 +1,18 @@
+@keyframes transition {
+	from {
+		left: 0px;
+		top: 200px;
+	}
+	40%, 60% {
+		left: 400px;
+		background: brown;
+	}
+	to {
+		left: 200px;
+		top: 100px;
+	}
+}
+
 .queue figure {
     width: 900px;
     height: 6000px;
@@ -23,4 +38,194 @@
 
 .setInterval {
     font-size: 52pt !important;
+}
+
+.transformExample{
+    height:100px;
+    width:100px;
+    content: ' ';
+    background-color: red;
+    margin: auto !important;
+}
+
+.transformExample:hover {
+    -webkit-transform: scale(1.5, 1.5); 
+}
+
+.linearEase {
+    display: flex;
+}
+
+.linearContainer {
+    width: 200px;
+}
+
+.linearExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: linear;
+
+}
+
+.eases:hover div{
+    left: 550px;
+}
+
+.Ease {
+    display: flex;
+}
+
+.easeContainer {
+    width: 200px;
+}
+
+.easeExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: ease;
+}
+
+.easeIn {
+    display: flex;
+}
+
+.easeInContainer {
+    width: 200px;
+}
+
+.easeInExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: ease-in;
+}
+
+.easeOut {
+    display: flex;
+}
+
+.easeOutContainer {
+    width: 200px;
+}
+
+.easeOutExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: ease-out;
+}
+
+.easeInOut {
+    display: flex;
+}
+
+.easeInOutContainer {
+    width: 200px;
+}
+
+.easeInOutExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.steps:hover div{
+    left: 600px;
+}
+
+.stepStart {
+    display: flex;
+}
+
+.stepStartContainer {
+    width: 200px;
+}
+
+.stepStartExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:300px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: step-start;
+}
+
+.stepEnd {
+    display: flex;
+}
+
+.stepEndContainer {
+    width: 200px;
+}
+
+.stepEndExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:300px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: step-end;
+}
+
+.stepStartTime {
+    display: flex;
+}
+
+.stepStartTimeContainer {
+    width: 200px;
+}
+
+.stepStartTimeExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:300px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: steps(10, start);
+}
+
+.stepEndTime {
+    display: flex;
+}
+
+.stepEndTimeContainer {
+    width: 200px;
+}
+
+.stepEndTimeExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:300px;
+    background-color: green;
+    transition: left 2s;
+    transition-timing-function: steps(10, end);
+}
+
+.frameResult {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    animation: 3s transition infinite;
 }
