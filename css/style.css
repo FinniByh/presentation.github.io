@@ -1,0 +1,26 @@
+.queue figure {
+    width: 900px;
+    height: 6000px;
+}
+
+.setTimeOut div{
+    display: flex;
+}
+
+.setTimeOut pre{
+    width: 80%;
+    border: none;
+    box-shadow: none;
+}
+
+.setTimeOut .title {
+    font-size: 48pt;
+}
+
+.setTimeOut li {
+    font-size: 24pt;
+}
+
+.setInterval {
+    font-size: 52pt !important;
+}

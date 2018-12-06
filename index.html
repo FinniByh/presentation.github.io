@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Event loop and animations</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Event loop</h1>
+				</section>
+				<section class="callstacks">
+					<section class="example">
+						<h3>Call stack</h3>
+						<pre><code class="hljs">
+function greeting() {
+	sayHi();
+}
+function sayHi() {
+	return "Hi!";
+}
+	
+greeting();
+										
+						</code></pre>
+					</section>
+					<section class="queue">
+						<figure>
+							<img src="images/queue.jpg">
+						</figure>
+					</section>
+					<section class="setTimeOut">
+						<p class="title">Async throw setTimeOut()</p>
+						<div>
+							<pre><code>
+function uselessWork() {
+	setTimeout(function working() {
+		console.log("I've waited time");
+	}, 2000);
+}
+	
+uselessWork();
+							</code></pre>
+							<ul>
+								<li class="fragment">Push all functions</li>
+								<li class="fragment">Pop uselessWork and setTimeOut</li>
+								<li class="fragment">Waiting time</li>
+								<li class="fragment">Working</li>
+							</ul>
+						</div>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h2>What is event loop</h2>
+					</section>
+					<section class="setInterval">
+						<p>setInterval()</p>
+					</section>
+				</section>
+				<section>
+					<h3>webapi this time...</h3>
+				</section>
+				<section>
+					<h1>animations</h1>
+				</section>
+				<section>
+					<section>
+						<h3>transitions</h3>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">transition</li>
+							<li class="fragment">transition-delay</li>
+							<li class="fragment">transition-duration</li>
+							<li class="fragment">transition-property</li>
+							<li class="fragment">transition-timing-function</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Be carreful!</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Transform</h3>
+					</section>
+					<section>
+						<h3>eases</h3>
+						<p>Examples in future</p>
+					</section>
+					<section>
+						<h3>steps</h3>
+						<p>Examples in future</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Some games with time</h3>
+					</section>
+					<section>
+						<h3>Time delay</h3>
+					</section>
+					<section>
+						<h3>Steps in time</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>animations and keyframes</h3>
+					</section>
+					<section>
+						<h3>keyframes</h3>
+						<pre><code>
+@keyframes transition {
+	from {
+		left: 0px;
+		top: 200px;
+	}
+	40%, 60% {
+		left: 400px;
+		background: brown;
+	}
+	to {
+		left: 200px;
+		top: 0px;
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h3>animations</h3>
+						<pre><code>
+.elem {
+	animation: transition 3s infinite;
+}								
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h3>thanks for watch</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
