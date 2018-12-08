@@ -13,6 +13,15 @@
 	}
 }
 
+@keyframes move {
+	from {
+		left: 250px;
+	}
+	to {
+		left: 550px;
+	}
+}
+
 .setTimeOut div{
     display: flex;
 }
@@ -223,4 +232,118 @@
     height: 150px;
     width: 150px;
     animation: 3s transition infinite;
+}
+
+.delays:hover div{
+    left: 550px;
+}
+
+.negativeDelay {
+    display: flex;
+}
+
+.negativeDelayContainer {
+    width: 200px;
+}
+
+.negativeDelayExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 3s;
+    transition-delay: -1s;
+}
+
+.zeroDelay {
+    display: flex;
+}
+
+.zeroDelayContainer {
+    width: 200px;
+}
+
+.zeroDelayExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 3s;
+}
+
+.delay {
+    display: flex;
+}
+
+.delayContainer {
+    width: 200px;
+}
+
+.delayExample {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+    transition: left 3s;
+    transition-delay: 1s;
+}
+
+.iterationsHover:hover #infinite{
+    animation: move 3s;
+    animation-iteration-count: infinite;
+}
+
+.iterationsHover:hover #floor{
+    animation: move 3s;
+    animation-iteration-count: 0.5;
+}
+
+.iterationsHover:hover #integer{
+    animation: move 3s;
+    animation-iteration-count: 2;
+}
+
+.iterations {
+    display: flex;
+}
+
+.iterations .Container {
+    width: 200px;
+}
+
+.iterations .Example {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
+}
+
+.directions {
+    display: flex;
+}
+
+.directionsHover:hover #normal{
+    animation: move 3s;
+    animation-direction: normal;
+}
+
+.directionsHover:hover #reverse{
+    animation: move 3s;
+    animation-direction: reverse;
+}
+
+.directions .Container {
+    width: 200px;
+}
+
+.directions .Example {
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:250px;
+    background-color: green;
 }
