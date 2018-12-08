@@ -13,11 +13,6 @@
 	}
 }
 
-.queue figure {
-    width: 900px;
-    height: 6000px;
-}
-
 .setTimeOut div{
     display: flex;
 }

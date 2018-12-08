@@ -28,52 +28,46 @@
 				<section>
 					<h1>Event loop</h1>
 				</section>
-				<section class="callstacks">
-					<section class="example">
-						<h3>Call stack</h3>
-						<pre><code class="hljs">
-function greeting() {
-	sayHi();
-}
-function sayHi() {
-	return "Hi!";
-}
-	
-greeting();
-										
-						</code></pre>
-					</section>
-					<section class="queue">
-						<figure>
-							<img src="images/queue.jpg">
-						</figure>
-					</section>
-					<section class="setTimeOut">
-						<p class="title">Async throw setTimeOut()</p>
-						<div>
-							<pre><code>
-function uselessWork() {
-	setTimeout(function working() {
-		console.log("I've waited time");
-	}, 2000);
-}
-	
-uselessWork();
-							</code></pre>
-							<ul>
-								<li class="fragment">Push all functions</li>
-								<li class="fragment">Pop uselessWork and setTimeOut</li>
-								<li class="fragment">Waiting time</li>
-								<li class="fragment">Working</li>
-							</ul>
-						</div>
-					</section>
-					<section>
-						<p>SetInterval()</p>
-					</section>
+				<section>
+					<img src="images/teaPrepareResult.jpg">
 				</section>
 				<section>
-					<h3>webui this time...</h3>
+					<section>
+						<h3>JS engine</h3>
+					</section>
+					<section>
+						<div style="display:flex;">
+							<figure>
+								<img src="images/eventLoop.jpg">
+							</figure>
+							<pre style="max-width:300px; box-shadow: none;"><code>
+function first(){}
+function second(){}
+function third(){}
+							</code></pre>
+						</div>	
+					</section>
+					<section>
+						<h3>async work</h3>
+						<ul>
+							<li class="fragment">Ajax</li>
+							<li class="fragment">setTimeOut()</li>
+							<li class="fragment">setInterval()</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Code example</h3>
+						<pre><code>
+console.log('Hi');
+setTimeout(function cb1() { 
+	console.log('cb1');
+}, 5000);
+console.log('Bye');
+						</code></pre>
+					</section>
+					<section>
+						<img src="images/howEventLoopWork.gif">
+					</section>
 				</section>
 				<section>
 					<h1>animations</h1>
